@@ -15,13 +15,11 @@ export default function Header(props){
         if(esconderMenuHg === "true"){ 
         setAparecerMenuHg("false")
         setIconMenuBg("x")
-    }
-       else{
+    } else{
          setAparecerMenuHg("true")
          setIconMenuBg("|||")
        }
     }
-
     return(
         <header className={style.header}>
             <div className={style.logoNome}>
