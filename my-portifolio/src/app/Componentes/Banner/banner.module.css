@@ -8,11 +8,11 @@
     flex-wrap: wrap;
 }
 .containerImage{
-    width: 30%;
-    min-width: 230px;
+    width: 100%;
+    min-width: 280px;
     max-width: 350px;
     height: auto;
-    margin: 0px 15px 0px 15px;
+    margin: 0px 0px 0px 15px;
 }
 .image{
     width: 100%;
@@ -22,25 +22,106 @@
 }
 .containerInformacoesBanner{
     display: flex;
-    max-width: 370px;
+    max-width: 334px;
+    width: 100%;
     min-width: 312px;
-    height: 230px;
-    background: tomato;
-    margin: 0px 15px 0px 15px;
-    justify-content: flex-start;
+    height: auto;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .span{
-    font-size: 20px;
-    letter-spacing: 2px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2e2f2c;
 }
 .h2{
-    font-size: 30px;
+    font-size: 42px;
 }
 .p{
     font-size: 25px;
+    font-weight: 600;
+    color: #2e2f2c;
+    letter-spacing: 2px;
+    padding: 0px 0px 7px;
+    letter-spacing: 3px;
 }
 .containerLinksBanner{
-    
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.containerCurriculoBanner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkCurriculo, .linkContact{
+    text-decoration: none;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #000;
+    border-radius: 15px;
+    border: 2px solid;
+    padding: 10px 9px;
+}
+.linkCurriculo{
+    margin: 0px 20px 0px 0px;
+}
+.linkCurriculo:hover, .linkContact:hover{
+    background-color: #000000c4;
+    color: #fff;
+    border-radius: 15px;
+}
+.containerIconBanner{
+    padding: 15px 0px 0px;
+}
+.iconGithub,.iconLinkedin,.iconWathSapp{
+    padding: 0px 10px;
+}
+.icon{
+    border-radius: 50px;
+    filter: grayscale(1);
+}
+.icon:hover{
+    filter: none;
+    filter: drop-shadow(0px 3px 5px black);
+}
+@media(max-width:768px){
+    .icon{
+        filter: none;
+        width: 100%;
+        max-width: 65px;
+        min-width: 60px;
+        height: auto;
+    }
+    .linkCurriculo, .linkContact{
+        text-decoration: none;
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #000;
+        border-radius: 15px;
+        border: 2px solid;
+        padding: 15px 20px;
+    }
+    .containerImage{
+        max-width: 284px;
+        min-width: 230px;
+        margin: 0px 0px 5px 0px;
+    }
+}
+@media(min-width:619px){
+    .containerGlobalBanner{
+        height: 400px;
+    }
+}
+@media(min-width:769px){
+    .icon{
+        width: 50px;
+        height: auto;
+        object-fit: scale-down;
+    }
 }

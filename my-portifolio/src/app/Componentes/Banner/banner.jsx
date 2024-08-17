@@ -3,6 +3,13 @@ import Image from "next/image";
 
 import style from "../Banner/banner.module.css";
 
+import BaixarCv from "@/app/service/service";
+
+//importando icons redes sociais
+import IconWhatsapp from "@/../public/whatsapp.png";
+import IconLinkedin from "@/../public/linkedin.jpg";
+import IconGithub from "@/../public/github.png";
+
 export default function Banner(props){
     return(
         <section className={style.containerGlobalBanner}>
@@ -16,12 +23,14 @@ export default function Banner(props){
                     <p className={style.p}> Frontend Developer </p>
                 </div>
                 <div className={style.containerLinksBanner}>
-                   <div className={style.containerBtnBanner}>
-                       <a href="../../curriculo/TarcisioHenriqueCurriculo.pdf">Curriculo</a>
-                       <a href="#">Contact info</a>
+                   <div className={style.containerCurriculoBanner}>
+                       {BaixarCv()}
+                       <Link className={style.linkContact} href="#">Contact info</Link>
                    </div>
                    <div className={style.containerIconBanner}>
-
+                    <Link className={style.iconGithub} target="_blank" href="https://github.com/tarcisiohenriqueassis"><Image className={style.icon} src={IconGithub} width={40} height={40}/></Link>
+                    <Link className={style.iconLinkedin} href="www.linkedin.com/in/tarcisiohenriqueassis"><Image className={style.icon} src={IconLinkedin} width={40} height={40}/></Link>
+                    <Link className={style.iconWathSapp} href="tel:+5533987054654"><Image className={style.icon} src={IconWhatsapp} width={40} height={40}/></Link>
                    </div>
                 </div>
             </div>
