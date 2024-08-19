@@ -59,22 +59,26 @@
     justify-content: center;
     align-items: center;
 }
+.linkContact{
+    background-color: #000;
+    color: #fff;
+}
 .linkCurriculo, .linkContact{
     text-decoration: none;
     font-size: 16px;
     letter-spacing: 1px;
-    color: #000;
-    border-radius: 15px;
+    border-radius: 25px;
     border: 2px solid;
     padding: 10px 9px;
 }
 .linkCurriculo{
     margin: 0px 20px 0px 0px;
+    color: #000;
 }
-.linkCurriculo:hover, .linkContact:hover{
-    background-color: #000000c4;
+.linkCurriculo:hover{
+    background-color: #000000;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 25px;
 }
 .containerIconBanner{
     padding: 15px 0px 0px;
@@ -94,7 +98,7 @@
     .icon{
         filter: none;
         width: 100%;
-        max-width: 65px;
+        max-width: 60px;
         min-width: 60px;
         height: auto;
     }
@@ -102,7 +106,6 @@
         text-decoration: none;
         font-size: 16px;
         letter-spacing: 1px;
-        color: #000;
         border-radius: 15px;
         border: 2px solid;
         padding: 15px 20px;
@@ -120,8 +123,7 @@
 }
 @media(min-width:769px){
     .icon{
-        width: 50px;
+        width: 48px;
         height: auto;
-        object-fit: scale-down;
     }
 }
