@@ -6,6 +6,7 @@
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+    margin: 0px 0px 70px;
 }
 .containerImage{
     width: 100%;
@@ -81,7 +82,7 @@
     border-radius: 25px;
 }
 .containerIconBanner{
-    padding: 15px 0px 0px;
+    padding: 20px 0px 0px;
 }
 .iconGithub,.iconLinkedin,.iconWathSapp{
     padding: 0px 10px;
@@ -113,17 +114,29 @@
     .containerImage{
         max-width: 284px;
         min-width: 230px;
-        margin: 0px 0px 5px 0px;
+        margin: 0px 0px 5px 10px;
     }
 }
 @media(min-width:619px){
-    .containerGlobalBanner{
-        height: 400px;
+    .containerInformacoesBanner{
+        margin-left: 7px;
     }
 }
 @media(min-width:769px){
     .icon{
         width: 48px;
         height: auto;
+    }
+    .containerInformacoesBanner{
+        padding-left: 15px;
+    }
+    .containerGlobalBanner{
+        height: 421px;
+    }
+}
+@media(min-width:648px){
+    .containerGlobalBanner {
+        height: 400px;
+        margin: 0;                                     
     }
 }

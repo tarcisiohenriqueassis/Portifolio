@@ -37,7 +37,7 @@ export default function Header(props){
                 </div>
                 <div className={esconderMenuHg === "true" ?style.containerMenuHbFechado :style.containerMenuHbOpen}>
                 <a className={style.linkMenuHb} href={props.linkAbout}>About</a>
-                <a className={style.linkMenuHb} href={props.linkExperience}>Experience</a>
+                <a className={style.linkMenuHb} href="/sobreMim">Experience</a>
                 <a className={style.linkMenuHb} href={props.linkProjects}>Projects</a>
                 <a className={style.linkMenuHb} href={props.linkContact}>Contact</a>
                 </div>

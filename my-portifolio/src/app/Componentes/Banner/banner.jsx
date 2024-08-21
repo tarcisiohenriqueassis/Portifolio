@@ -28,7 +28,7 @@ export default function Banner(props){
                        <Link className={style.linkContact} href="#">Contact info</Link>
                    </article>
                    <article className={style.containerIconBanner}>
-                    <Link className={style.iconGithub} target="_blank" href="https://github.com/tarcisiohenriqueassis"><Image className={style.icon} src={IconGithub} width={40} height={40}/></Link>
+                    <Link className={style.iconGithub}  href="https://github.com/tarcisiohenriqueassis"><Image className={style.icon} src={IconGithub} width={40} height={40}/></Link>
                     <Link className={style.iconLinkedin} href="https://www.linkedin.com/in/tarcisiohenriqueassis/"><Image className={style.icon} src={IconLinkedin} width={40} height={40}/></Link>
                     <Link className={style.iconWathSapp} href="tel:+5533987054654"><Image className={style.icon} src={IconWhatsapp} width={40} height={40}/></Link>
                    </article>
