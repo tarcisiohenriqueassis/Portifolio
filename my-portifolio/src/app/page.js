@@ -40,8 +40,8 @@ export default function Home() {
           <span className={styles.spanSections}>Explore My</span>
           <h2 className={styles.tituloSections}>Experience</h2>
         </article>
-        <article>
-          
+        <article className={styles.containerCardsExperience}>
+
         </article>
       </section>
      
