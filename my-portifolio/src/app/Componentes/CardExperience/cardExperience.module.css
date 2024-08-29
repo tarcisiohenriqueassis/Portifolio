@@ -1,7 +1,26 @@
-
 .card{
     width: 100%;
-    min-width: 300px;
-    max-width: 400px;
-    border: 2px solid #000;
+    min-width: 160px;
+    max-width: 190px;
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.imagem{
+    width: 100%;
+    min-width: 50px;
+    max-width: 55px;
+    height: auto;
+    border-radius: 50px;
+    margin: 0px 5px 0px 0px;
+}
+.titulo{
+    font-size: larger;
+    font-weight: 600;
+
+}
+.p{
+    font-size: smaller;
 }

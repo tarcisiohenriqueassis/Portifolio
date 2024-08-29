@@ -6,7 +6,7 @@
   min-height: 100vh;
   align-items: center;
 }
-.containerSectionCardSobreMim{
+.containerSectionGlobalCardSobreMim{
   width: 100%;
   height: auto;
   display: flex;
@@ -34,7 +34,7 @@
   font-weight: 500;
   letter-spacing: 2px;
 }
-.containerCards{
+.containerCardsSobreMim{
   display: flex;
   width: 100%;
   height: auto;
@@ -48,9 +48,51 @@
   max-width: 50px;
   min-width: 30px;
 }
-
+.containerGlobalSectionExperience{
+  width: 100%;
+  height: auto;
+}
+.containerCardsLinguagens{
+  width: 100%;
+  height: auto;
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.containerGlobalCardsFrontEnd ,.containerGlobalCardsBackend{
+  width: 100%;
+  min-width: 200px;
+  max-width: 445px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 15px;
+  border: 2px solid #000;
+  border-radius: 15px;
+}
+.containerCards{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 10px;
+  padding: 7px;
+}
 @media(max-width:871px) {
   .containerSectionCard{
     flex-direction: column;
+  }
+}
+@media(max-width:886px){
+  .containerGlobalCardsFrontEnd, .containerGlobalCardsBackend{
+    height: auto;
   }
 }
