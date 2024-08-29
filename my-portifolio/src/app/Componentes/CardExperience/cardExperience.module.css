@@ -24,3 +24,6 @@
 .p{
     font-size: smaller;
 }
+@media(max-width:445px){
+    .card{max-width: 170px;}
+}

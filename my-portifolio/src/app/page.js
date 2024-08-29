@@ -14,12 +14,15 @@ import FotoPerfil from "../../public/fotoPerfil.jpg";
 import IconEducation from "../../public/education.png";
 import IconExperience from "../../public/experience.png";
 import IconScrollPage from "../../public/arrow.png";
-//imagens da seção experience
+//imagens da seção experience Frontend
 import IconHtml from "../../public/iconHtml.png";
 import IconCss from "../../public/iconCss.webp";
 import IconReact from "../../public/iconReact.png";
-import IconNodejs from "../../public/iconNodejs.png";
 import IconJs from "../../public/iconJs.png";
+//imagens da seção experience Backend
+import IconNodejs from "../../public/iconNodejs.png";
+import IconNpm from "../../public/iconNpm.jpg";
+import IconGit from "../../public/iconGit.png";
 
 export default function Home() {
   return (
@@ -49,7 +52,7 @@ export default function Home() {
         </article>
         <article className={styles.containerCardsLinguagens}>
           <div className={styles.containerGlobalCardsFrontEnd}>
-            <h3>Frontend</h3>
+            <h3 className={styles.tituloLinguagensFrontBack}>Frontend Development</h3>
               <article className={styles.containerCards}>
                 <CardExperience linguagem="Html" nivelExperiencia="avançado" iconLinguagem={IconHtml} />
                 <CardExperience linguagem="Css" nivelExperiencia="intermediario" iconLinguagem={IconCss}/>
@@ -58,12 +61,12 @@ export default function Home() {
               </article>   
           </div>
           <div className={styles.containerGlobalCardsBackend}>
-            <h3>Backend</h3>
+            <h3 className={styles.tituloLinguagensFrontBack}>Backend Development</h3>
               <article className={styles.containerCards}>
-                <CardExperience linguagem="Html" nivelExperiencia="avançado" iconLinguagem={IconHtml} />
-                <CardExperience linguagem="Css" nivelExperiencia="intermediario" iconLinguagem={IconCss}/>
-                <CardExperience linguagem="React.js" nivelExperiencia="intermediario" iconLinguagem={IconReact}/>
+                <CardExperience linguagem="Npm" nivelExperiencia="Basico" iconLinguagem={IconNpm} />
+                <CardExperience linguagem="Node.js" nivelExperiencia="intermediario" iconLinguagem={IconNodejs}/>
                 <CardExperience linguagem="JavaScript" nivelExperiencia="basico" iconLinguagem={IconJs}/>
+                <CardExperience linguagem="Git" nivelExperiencia="basico" iconLinguagem={IconGit}/>
               </article>   
           </div>
         </article>
