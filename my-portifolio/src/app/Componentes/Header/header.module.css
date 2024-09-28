@@ -11,7 +11,7 @@
     font-size: 30px;
     letter-spacing: 1px;
 }
-.containerLinks{
+.containerLinksNavBar{
     width: 410px;
     height: 100%;
     display: flex;
@@ -19,16 +19,31 @@
     justify-content: space-between;
     letter-spacing: 1px;
 }
-.link{
+.linkNavBar{
     padding: 5px 0px 6px;
     border: 2px solid transparent;
     font-weight: 400;
+    text-decoration: none;
+    color: #000;
 }
-.link:hover{
+.linkNavBar:hover{
     padding: 5px 0px 6px;
     border-bottom: 2px solid #8b7d7db7;
     color:#5e5959f0;
 } 
+.containerBtn{
+    width: 60px;
+    height: 60px;
+}
+.btn{
+    width: 100%;
+    height: 100%;
+    font-size: 46px;
+    transform: rotate(90deg);
+    border: none;
+    background-color: transparent;
+    color: #000;
+}
 .containerGlobalMenuHb{
     display: flex;
     flex-direction: column;
@@ -51,17 +66,8 @@
 .containerMenuHbFechado{
     display: none;
 }
-.containerBtn{
-    width: 60px;
-    height: 60px;
-}
-.btn{
-    width: 100%;
-    height: 100%;
-    font-size: 46px;
-    transform: rotate(90deg);
-    border: none;
-    background-color: transparent;
+.linkMenuHb{
+    text-decoration: none;
     color: #000;
 }
 @media(max-width:625px){
@@ -69,10 +75,10 @@
     font-size: 23px;
     letter-spacing: 2px;
     }
-    .containerLinks{
+    .containerLinksNavBar{
         display: none;
     }
-    .link{
+    .linkNavBar{
         font-weight: 600;
         letter-spacing: 2px;
         font-size: 22px;

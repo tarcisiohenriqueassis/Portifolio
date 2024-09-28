@@ -1,7 +1,7 @@
 .containerGlobalCard{
-    width: 90%;
+    width: 100%;
     display: flex;
-    max-width: 400px;
+    max-width: 455px;
     min-width: 300px;
     border: 2px solid;
     border-radius: 15px;

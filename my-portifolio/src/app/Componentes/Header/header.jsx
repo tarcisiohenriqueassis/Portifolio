@@ -25,11 +25,11 @@ export default function Header(props){
             <div className={style.logoNome}>
                 <h1 className={style.h1}>Tarcísio H</h1>
             </div>
-            <div className={style.containerLinks}>
-            <a className={style.link} href={props.linkAbout}>About</a>
-            <a className={style.link} href={props.linkExperience}>Experience</a>
-            <a className={style.link} href={props.linkProjects}>Projects</a>
-            <a className={style.link} href={props.linkContact}>Contact</a>
+            <div className={style.containerLinksNavBar}>
+                <a className={style.linkNavBar} href={props.linkAbout}>About</a>
+                <a className={style.linkNavBar} href={props.linkExperience}>Experience</a>
+                <a className={style.linkNavBar} href={props.linkProjects}>Projects</a>
+                <a className={style.linkNavBar} href={props.linkContact}>Contact</a>
             </div>
             <div className={style.containerGlobalMenuHb}>
                 <div className={style.containerBtn}>
@@ -37,7 +37,7 @@ export default function Header(props){
                 </div>
                 <div className={esconderMenuHg === "true" ?style.containerMenuHbFechado :style.containerMenuHbOpen}>
                 <a className={style.linkMenuHb} href={props.linkAbout}>About</a>
-                <a className={style.linkMenuHb} href="/sobreMim">Experience</a>
+                <a className={style.linkMenuHb} href={props.linkExperience}>Experience</a>
                 <a className={style.linkMenuHb} href={props.linkProjects}>Projects</a>
                 <a className={style.linkMenuHb} href={props.linkContact}>Contact</a>
                 </div>

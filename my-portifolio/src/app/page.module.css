@@ -1,22 +1,21 @@
 .main {
   display: flex;
-  width: 98vw;
+  width: 100%;
   max-width: 1400px;
   flex-direction: column;
   min-height: 100vh;
   align-items: center;
 }
-.containerSectionGlobalCardSobreMim{
+.containerGlobalCardSobreMim{
   width: 100%;
   height: auto;
   display: flex;
-  padding: 30px 15px;
+  padding: 30px 10px;
   margin: 9px 0px;
   text-align: center;
   justify-content: center;
   flex-wrap: wrap;
   flex-direction: column;
-
 }
 .containerTitulo{
   width: 100%;
@@ -41,7 +40,7 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 40px 0px 50px;
+  padding: 20px 0px 50px;
 }
 .imgLinkScrollPage{
   width: 100%;
@@ -51,6 +50,10 @@
 .containerGlobalSectionExperience{
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0px 50px;
 }
 .containerCardsLinguagens{
   width: 100%;
@@ -58,9 +61,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 10px;
+  padding: 10px 0px 50px;
   justify-content: center;
-  align-items: center;
 }
 .containerGlobalCardsFrontEnd ,.containerGlobalCardsBackend{
   width: 100%;
@@ -72,9 +74,10 @@
   flex-direction: column;
   align-items: center;
   align-content: center;
-  padding: 15px 7px;
+  padding: 19px 7px;
   border: 2px solid #000;
   border-radius: 15px;
+  margin: 0px 10px;
 }
 .tituloLinguagensFrontBack{
   font-size: larger;
@@ -84,12 +87,33 @@
 .containerCards{
   width: 100%;
   height: auto;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  align-content: flex-start;
+  display: inline-grid;
   gap: 10px 3px;
+  grid-template-columns:50% 50%;
   justify-content: center;
+  justify-items: center;
+}
+.containerGlobalMyProjects{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.containerCardsMyProjects{
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 48% 48%;
+  justify-content: center;
+  padding: 30px 0px;
+}
+
+
+
+@media(max-width:380px){
+  .containerCards{
+    grid-template-columns: 100%;
+  }
 }
 @media(max-width:871px) {
   .containerSectionCard{
@@ -99,5 +123,12 @@
 @media(max-width:886px){
   .containerGlobalCardsFrontEnd, .containerGlobalCardsBackend{
     height: auto;
+  }
+}
+@media(max-width:949px){
+  .containerCardsMyProjects{
+    display: flex;
+    padding: 0px 10px;
+    flex-wrap: wrap;
   }
 }
