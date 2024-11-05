@@ -2,8 +2,6 @@ import Image from "next/image";
 
 import style from "../CardExperience/cardExperience.module.css";
 
-import IconCheck from "../../../../public/checkmark.png";
-
 export default function CardExperience(props){
     return(
             <article className={style.card}>

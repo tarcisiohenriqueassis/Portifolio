@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Ft from "../../../../public/thDesing.png";
 
 import style from "../CardProject/project.module.css";
 import Link from "next/link";

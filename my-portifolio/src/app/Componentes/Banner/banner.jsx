@@ -5,16 +5,12 @@ import style from "../Banner/banner.module.css";
 
 import BaixarCv from "@/app/service/service";
 
-//importando icons redes sociais
-import IconWhatsapp from "@/../public/whatsapp.png";
-import IconLinkedin from "@/../public/linkedin.jpg";
-import IconGithub from "@/../public/github.png";
 
 export default function Banner(props){
     return(
         <section className={style.containerGlobalBanner}>
             <div className={style.containerImage}>
-                <Image className={style.image} src={props.imagemBanner} alt={props.titulo} title={props.titulo}/>
+                <Image className={style.image} src={props.imagemBanner} alt={props.tituloImagemPerfil} title={props.tituloImagemPerfil}/>
             </div>
             <div className={style.containerInformacoesBanner}>
                 <article>
@@ -28,9 +24,9 @@ export default function Banner(props){
                        <Link className={style.linkContact} href="#">Contact info</Link>
                    </article>
                    <article className={style.containerIconBanner}>
-                    <Link className={style.iconGithub}  href="https://github.com/tarcisiohenriqueassis"><Image className={style.icon} src={IconGithub} width={40} height={40}/></Link>
-                    <Link className={style.iconLinkedin} href="https://www.linkedin.com/in/tarcisiohenriqueassis/"><Image className={style.icon} src={IconLinkedin} width={40} height={40}/></Link>
-                    <Link className={style.iconWathSapp} href="tel:+5533987054654"><Image className={style.icon} src={IconWhatsapp} width={40} height={40}/></Link>
+                    <Link className={style.iconGithub}  href={props.linkNav1}><Image className={style.icon} src={props.iconLink1} width={40} height={40}/></Link>
+                    <Link className={style.iconLinkedin} href={props.linkNav2}><Image className={style.icon} src={props.iconLink2} width={40} height={40}/></Link>
+                    <Link className={style.iconWathSapp} href={props.linkNav3}><Image className={style.icon} src={props.iconLink3} width={40} height={40}/></Link>
                    </article>
                 </div>
 

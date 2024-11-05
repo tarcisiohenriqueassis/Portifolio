@@ -1,3 +1,5 @@
+"use client"
+import React,{ useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 //Css
@@ -12,26 +14,31 @@ import Project from "./Componentes/CardProject/project.jsx";
 //imagem perfil Banner
 import FotoPerfil from "../../public/fotoPerfil.jpg";
 //imagens da seção about 
-import IconEducation from "../../public/education.png";
-import IconExperience from "../../public/experience.png";
-import IconScrollPage from "../../public/arrow.png";
+import IconEducation from "../../public/imagensIcons/education.png";
+import IconExperience from "../../public/imagensIcons/experience.png";
+import IconScrollPage from "../../public/imagensIcons/arrow.png";
 //imagens da seção experience Frontend
-import IconHtml from "../../public/iconHtml.png";
-import IconCss from "../../public/iconCss.webp";
-import IconReact from "../../public/iconReact.png";
-import IconJs from "../../public/iconJs.png";
+import IconHtml from "../../public/imagensIcons/iconHtml.png";
+import IconCss from "../../public/imagensIcons/iconCss.webp";
+import IconReact from "../../public/imagensIcons/iconReact.png";
+import IconJs from "../../public/imagensIcons/iconJs.png";
 //imagens da seção experience Backend
-import IconNodejs from "../../public/iconNodejs.png";
-import IconNpm from "../../public/iconNpm.jpg";
-import IconGit from "../../public/iconGit.png";
-import IconExpress from "../../public/iconExpress.png";
-import IconPostman from "../../public/iconPostman.jpg";
-
+import IconNodejs from "../../public/imagensIcons/iconNodejs.png";
+import IconNpm from "../../public/imagensIcons/iconNpm.jpg";
+import IconGit from "../../public/imagensIcons/iconGit.png";
+import IconExpress from "../../public/imagensIcons/iconExpress.png";
+import IconPostman from "../../public/imagensIcons/iconPostman.jpg";
+import IconMySql from "../../public/imagensIcons/IconMySql.png";
+//imagens Icons redes sociais
+import IconGithub from "../../public/imagensIcons/github.png";
+import IconLinkedin from "../../public/imagensIcons/linkedin.jpg";
+import IconWhatsapp from "../../public/imagensIcons/whatsapp.png";
 export default function Home() {
+  //iconLink1={IconGithub} linkNav1='https://github.com/tarcisiohenriqueassis'  iconLink2={IconLinkedin} LinkNav2 ='https://www.linkedin.com/in/tarcisiohenriqueassis/' iconLink3={IconWhatsapp} LinkNav3 ='tel:+5533987054654'
   return (
     <main className={styles.main}>
       <Header linkAbout="#SobreMim" linkExperience="#Experience" linkProjects="#projects" linkContact="#contact"/>
-      <Banner id="Banner" imagemBanner={FotoPerfil} titulo="Tarcisio H"/>
+      <Banner id="Banner" imagemBanner={FotoPerfil} tituloImagemPerfil="Tarcisio H" />
       <section className={styles.containerGlobalCardSobreMim}>
       
         <article className={styles.containerTitulo}>
@@ -73,6 +80,7 @@ export default function Home() {
                 <CardExperience linguagem="Git" nivelExperiencia="básico" iconLinguagem={IconGit}/>
                 <CardExperience linguagem="Postman" nivelExperiencia="básico" iconLinguagem={IconPostman}/>
                 <CardExperience linguagem="Express" nivelExperiencia="básico" iconLinguagem={IconExpress} />
+                <CardExperience linguagem="MySql" nivelExperiencia="básico" iconLinguagem={IconMySql}/>
               </article>   
           </div>
         </article>
