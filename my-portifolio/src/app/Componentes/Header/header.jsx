@@ -32,7 +32,7 @@ export default function Header(props){
                 <a className={style.linkNavBar} href={props.linkContact}>Contact</a>
             </div>
             <div className={style.containerGlobalMenuHb}>
-                <div className={style.containerBtn}>
+            <div className={style.containerBtn}>
                 <button className={style.btn} onClick={AbrirMenu}>{iconMenuBg}</button>
                 </div>
                 <div className={esconderMenuHg === "true" ?style.containerMenuHbFechado :style.containerMenuHbOpen}>
