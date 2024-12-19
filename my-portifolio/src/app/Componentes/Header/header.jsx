@@ -1,10 +1,10 @@
 "use client";
 
-import Link from "next/link";
-
 import  {useState}  from "react";
-
 import style from "../Header/header.module.css";
+
+import {gsap} from 'gsap';
+import React,{ useEffect, useRef } from "react";
 
 export default function Header(props){ 
    
@@ -20,8 +20,20 @@ export default function Header(props){
          setIconMenuBg("|||")
        }
     }
+
+    const containerRef = useRef(null);
+
+    useEffect(() => {
+        // Animação usando GSAP para o elemento com ref
+        gsap.fromTo(
+          containerRef.current,
+          { opacity: 0, x: 550,visibility:"hidden"}, // Estado inicial
+          { opacity: 1, x: 0, duration: 3, ease: "power3.out",visibility:"visible" } // Estado final
+        );
+      }, []);
+      
     return(
-        <header className={style.header}>
+        <header className={style.header} ref={containerRef}>
             <div className={style.logoNome}>
                 <h1 className={style.h1}>Tarcísio H</h1>
             </div>

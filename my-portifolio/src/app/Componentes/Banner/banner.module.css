@@ -1,4 +1,4 @@
-.containerGlobalBanner{
+.containerGlobalBanner{ 
     display: flex;
     width: 100%;
     height: auto;
@@ -14,8 +14,10 @@
     max-width: 350px;
     height: auto;
     margin: 0px 0px 0px 15px;
+    overflow: hidden;
 }
 .image{
+    opacity: 0;
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -33,14 +35,17 @@
     text-align: center;
 }
 .span{
+    opacity: 0;
     font-size: 15px;
     font-weight: 600;
     color: #2e2f2c;
 }
 .h2{
+    opacity: 0;
     font-size: 42px;
 }
 .p{
+    opacity: 0;
     font-size: 25px;
     font-weight: 600;
     color: #2e2f2c;
@@ -54,6 +59,7 @@
     flex-direction: column;
 }
 .containerCurriculoBanner{
+    opacity: 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -72,7 +78,7 @@
     border-radius: 25px;
     border: 2px solid;
     padding: 10px 5px;
-    background-color: #000;
+    
 }
 .linkCurriculo{
     margin: 0px 20px 0px 0px;
@@ -83,16 +89,16 @@
 .containerIconBanner{
     padding: 20px 0px 0px;
 }
-.iconGithub,.iconLinkedin,.iconWathSapp{
+.linkIconWathSapp,.linkIconLinkedin,.linkIconGithub{
     padding: 0px 10px;
+    
 }
-.icon{
+.iconLinkedin, .iconGithub, .iconWhatsapp{
     border-radius: 50px;
-    filter: grayscale(1);
+    opacity: 0;
 }
 .icon:hover{
-    filter: none;
-    filter: drop-shadow(0px 3px 5px black);
+    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.253));
 }
 @media(max-width:768px){
     .icon{

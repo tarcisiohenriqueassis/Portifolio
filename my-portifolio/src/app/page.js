@@ -1,5 +1,4 @@
 "use client"
-import React from "react";
 import Image from "next/image";
 
 //Css
@@ -28,17 +27,31 @@ import IconExpress from "../../public/imagensIcons/iconExpress.png";
 import IconPostman from "../../public/imagensIcons/iconPostman.jpg";
 import IconMySql from "../../public/imagensIcons/IconMySql.png";
 
+import {gsap} from 'gsap';
+import React,{ useEffect, useRef } from "react";
+
 
 export default function Home() {
- 
+
+  const tituloRef = useRef(null);
+
+  useEffect(() => {
+    // Animação usando GSAP para o elemento com ref
+    gsap.fromTo(
+      tituloRef.current,
+      { opacity: 0, y: 50, visibility:"hidden"  }, // Estado inicial
+      { opacity: 1, y: 0, duration: 2, ease: "power3.out", visibility:"visible" } // Estado final
+    );
+  }, []);
+  
   return (
     <main className={styles.main}>
       <Header linkAbout="#SobreMim" linkExperience="#Experience" linkProjects="#projects" linkContact="#contact"/>
       <Banner/>
       <section className={styles.containerGlobalCardSobreMim}>
-      <article className={styles.containerTitulo}>
-          <span id="SobreMim" className={styles.spanSections}>Get To Know More</span>
-          <h2 className={styles.tituloSections}>About Me</h2>
+      <article className={styles.containerTitulo} >
+          <span id="SobreMim" className={styles.spanSections}  >Get To Know More</span>
+          <h2 className={styles.tituloSections} >About Me</h2>
         </article>
         <article className={styles.containerCardsSobreMim}>
           <CardSobreMim imagemCard={IconExperience} titulo="Experience" span="1+ year" paragrafo="Frontend Development"/>
@@ -57,7 +70,7 @@ export default function Home() {
         </article>
         <article className={styles.containerCardsLinguagens}>
           <div className={styles.containerGlobalCardsFrontEnd}>
-            <h3 className={styles.tituloLinguagensFrontBack}>Frontend Development</h3>
+            <h3 className={styles .tituloLinguagensFrontBack}>Frontend Development</h3>
               <article className={styles.containerCards}>
                 <CardExperience linguagem="Html" nivelExperiencia="avançado" iconLinguagem={IconHtml} />
                 <CardExperience linguagem="Css" nivelExperiencia="intermediário" iconLinguagem={IconCss}/>
@@ -66,10 +79,10 @@ export default function Home() {
                 <CardExperience linguagem="Npm" nivelExperiencia="Básico" iconLinguagem={IconNpm} />    
                 <CardExperience linguagem="Git" nivelExperiencia="básico" iconLinguagem={IconGit}/>        
               </article>   
-             
+              
           </div>
-          <div className={styles.containerGlobalCardsBackend}>
-            <h3 className={styles.tituloLinguagensFrontBack}>Backend Development</h3>
+          <div  className={styles.containerGlobalCardsBackend}>
+            <h3  className={styles.tituloLinguagensFrontBack} >Backend Development</h3>
               <article className={styles.containerCards}>
                 <CardExperience linguagem="Node.js" nivelExperiencia="intermediário" iconLinguagem={IconNodejs}/>
                 <CardExperience linguagem="JavaScript" nivelExperiencia="básico" iconLinguagem={IconJs}/>
@@ -91,8 +104,14 @@ export default function Home() {
         <h2 className={styles.tituloSections}>My Projects</h2>
         <div className={styles.containerCardsMyProjects}>
         <Project imagemLinkGithub={IconGit}/>
+        <Project imagemLinkGithub={IconGit}/>
+        <Project imagemLinkGithub={IconGit}/>
+        <Project imagemLinkGithub={IconGit}/>
+        
         </div>
       </section>
+      <div data-aos="flip-left">dsfhdfghfgjhgf</div>
+
       </main>
   );
 }
