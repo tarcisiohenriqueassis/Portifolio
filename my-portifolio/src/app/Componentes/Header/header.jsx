@@ -4,7 +4,7 @@ import  {useState}  from "react";
 import style from "../Header/header.module.css";
 
 import {gsap} from 'gsap';
-import React,{ useEffect, useRef } from "react";
+import React,{ useLayoutEffect, useRef } from "react";
 
 export default function Header(props){ 
    
@@ -21,9 +21,10 @@ export default function Header(props){
        }
     }
 
-    const containerRef = useRef(null);
+    
 
-    useEffect(() => {
+    useLayoutEffect(() => {
+        const containerRef = useRef(null);
         // Animação usando GSAP para o elemento com ref
         gsap.fromTo(
           containerRef.current,

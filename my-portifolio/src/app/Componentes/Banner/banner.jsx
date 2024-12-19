@@ -14,22 +14,22 @@ import IconWhatsapp from "./../../../../public/imagensIcons/whatsapp.png";
 
 
 import {gsap} from 'gsap';
-import React,{ useLayoutEffect, useRef } from "react";
+import React,{ useLayoutEffect } from "react";
 
-export default function Banner(props){
+export default function Banner(){
 
 
     useLayoutEffect(()=>{
         //componentes titulo, subtitulo,paragrafo e imagem
-        gsap.fromTo(`.${style.image}`,{opacity:0,y:350},{opacity:1,y:0, duration:2,})
-        gsap.fromTo(`.${style.span}`,{ opacity:0},{duration:5, opacity:1})
-        gsap.fromTo(`.${style.h2}`,{x:-200, opacity:0},{x:0, opacity:1, duration:2})  
-        gsap.fromTo(`.${style.p}`,{x:200, opacity:0},{x:0, opacity:1, duration:2})
+        gsap.fromTo(`.${style.image}`,{opacity:0,y:350},{opacity:1,y:0, duration:2,}),
+        gsap.fromTo(`.${style.span}`,{ opacity:0},{duration:5, opacity:1}),
+        gsap.fromTo(`.${style.h2}`,{x:-200, opacity:0},{x:0, opacity:1, duration:2})  ,
+        gsap.fromTo(`.${style.p}`,{x:200, opacity:0},{x:0, opacity:1, duration:2}),
        
         //componentes BTN telefone e curriculo, icones de links
-        gsap.fromTo(`.${style.containerCurriculoBanner}`,{y:-100,opacity:0},{y:0, opacity:1,duration:2})
-        gsap.fromTo(`.${style.iconGithub}`,{y:-260,opacity:0},{y:0,opacity:1, duration:1})
-        gsap.fromTo(`.${style.iconLinkedin}`,{y:-260,opacity:0},{y:0,opacity:1, duration:2})
+        gsap.fromTo(`.${style.containerCurriculoBanner}`,{y:-100,opacity:0},{y:0, opacity:1,duration:2}),
+        gsap.fromTo(`.${style.iconGithub}`,{y:-260,opacity:0},{y:0,opacity:1, duration:1}),
+        gsap.fromTo(`.${style.iconLinkedin}`,{y:-260,opacity:0},{y:0,opacity:1, duration:2}),
         gsap.fromTo(`.${style.iconWhatsapp}`,{y:-260,opacity:0},{y:0,opacity:1, duration:3})
     },[]);
 
