@@ -1,6 +1,5 @@
-"use client"
+"use client";
 import Image from "next/image";
-
 //Css
 import styles from "./page.module.css";
 //Componentes
@@ -28,14 +27,14 @@ import IconPostman from "../../public/imagensIcons/iconPostman.jpg";
 import IconMySql from "../../public/imagensIcons/IconMySql.png";
 
 import {gsap} from 'gsap';
-import React,{ useEffect, useRef } from "react";
+import React,{ useLayoutEffect, useRef } from "react";
 
 
 export default function Home() {
 
   const tituloRef = useRef(null);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     // Animação usando GSAP para o elemento com ref
     gsap.fromTo(
       tituloRef.current,
