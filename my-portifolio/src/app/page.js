@@ -18,7 +18,6 @@ import IconCss from "../../public/imagensIcons/iconCss.webp";
 import IconReact from "../../public/imagensIcons/iconReact.png";
 import IconJs from "../../public/imagensIcons/iconJs.png";
 import IconGit from "../../public/imagensIcons/iconGit.png";
-//imagens da seção experience Backend
 import IconNodejs from "../../public/imagensIcons/iconNodejs.png";
 import IconNpm from "../../public/imagensIcons/iconNpm.jpg";
 import IconApiRest from "../../public/imagensIcons/IconApiRest.png";
