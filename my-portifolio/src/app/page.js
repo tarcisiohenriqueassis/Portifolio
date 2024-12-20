@@ -3,11 +3,11 @@ import Image from "next/image";
 //Css
 import styles from "./page.module.css";
 //Componentes
-import Header from "./Componentes/Header/header";
-import Banner from "./Componentes/Banner/banner";
-import CardSobreMim from "./Componentes/CardSobreMim/card";
-import CardExperience from "./Componentes/CardExperience/cardExperience";
-import Project from "./Componentes/CardProject/project.jsx";
+import Header from "@/app/Componentes/Header/header";
+import Banner from "@/app/Componentes/Banner/banner";
+import CardSobreMim from "@/app/Componentes/CardSobreMim/card";
+import CardExperience from "@/app/Componentes/CardExperience/cardExperience";
+import Project from "@/app/Componentes/CardProject/project.jsx";
 //imagens da seção about 
 import IconEducation from "@/../public/imagensIcons/education.png";
 import IconExperience from "@/../public/imagensIcons/experience.png";
