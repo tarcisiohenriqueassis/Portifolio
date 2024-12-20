@@ -1,4 +1,4 @@
-
+'use client';
 import  {useState}  from "react";
 import style from "../Header/header.module.css";
 
@@ -20,18 +20,18 @@ export default function Header(props){
        }
     }
 
-    
+    const headerRef= useRef(null);
 
     useLayoutEffect(() => {
         gsap.fromTo(
           `.${style.header}`,
-          { opacity: 0, x: 550,visibility:"hidden"}, // Estado inicial
+          { opacity: 0, x: 550}, // Estado inicial
           { opacity: 1, x: 0, duration: 3, ease: "power3.out",visibility:"visible" } // Estado final
         )
       }, []);
       
     return(
-        <header className={style.header}>
+        <header className={style.header} useRef={headerRef}>
             <div className={style.logoNome}>
                 <h1 className={style.h1}>Tarcísio H</h1>
             </div>

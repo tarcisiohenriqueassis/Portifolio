@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Image from "next/image";
 //Css
 import styles from "./page.module.css";

@@ -1,4 +1,4 @@
-
+'use client';
 import Image from "next/image";
 
 import style from "../Banner/banner.module.css";
@@ -18,13 +18,11 @@ import React,{ useLayoutEffect } from "react";
 
 export default function Banner(){
 
-    
-
     useLayoutEffect(()=>{
-     
         const tl = gsap.timeline();
+       
         gsap.registerPlugin(tl)
-        //componentes titulo, subtitulo,paragrafo e imagem
+       
         tl.fromTo(`.${style.image}`,{opacity:0,y:350},{opacity:1,y:0})
         .fromTo(`.${style.span}`,{ opacity:0},{opacity:1})
         .fromTo(`.${style.h2}`,{x:-200, opacity:0},{x:0, opacity:1})  
