@@ -1,4 +1,4 @@
-import style from "@/app/Componentes/Banner/banner.module.css"
+import style from "../Componentes/Banner/banner.module.css"
 
 const BaixarCv=()=>{
     return( 

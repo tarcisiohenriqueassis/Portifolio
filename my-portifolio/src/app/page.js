@@ -3,27 +3,27 @@ import Image from "next/image";
 //Css
 import styles from "./page.module.css";
 //Componentes
-import Header from "@/app/Componentes/Header/header";
-import Banner from "@/app/Componentes/Banner/banner";
-import CardSobreMim from "@/app/Componentes/CardSobreMim/card";
-import CardExperience from "@/app/Componentes/CardExperience/cardExperience";
-import Project from "@/app/Componentes/CardProject/project.jsx";
+import Header from "./Componentes/Header/header";
+import Banner from "./Componentes/Banner/banner";
+import CardSobreMim from "./Componentes/CardSobreMim/card";
+import CardExperience from "./Componentes/CardExperience/cardExperience";
+import Project from "./Componentes/CardProject/project.jsx";
 //imagens da seção about 
-import IconEducation from "@/../public/imagensIcons/education.png";
-import IconExperience from "@/../public/imagensIcons/experience.png";
-import IconScrollPage from "@/../public/imagensIcons/arrow.png";
+import IconEducation from "/public/imagensIcons/education.png";
+import IconExperience from "/public/imagensIcons/experience.png";
+import IconScrollPage from "/public/imagensIcons/arrow.png";
 //imagens da seção experience Frontend
-import IconHtml from "@/../public/imagensIcons/iconHtml.png";
-import IconCss from "@/../public/imagensIcons/iconCss.webp";
-import IconReact from "@/../public/imagensIcons/iconReact.png";
-import IconJs from "@/../public/imagensIcons/iconJs.png";
-import IconGit from "@/../public/imagensIcons/iconGit.png";
-import IconNodejs from "@/../public/imagensIcons/iconNodejs.png";
-import IconNpm from "@/../public/imagensIcons/iconNpm.jpg";
-import IconApiRest from "@/../public/imagensIcons/IconApiRest.png";
-import IconExpress from "@/../public/imagensIcons/iconExpress.png";
-import IconPostman from "@/../public/imagensIcons/iconPostman.jpg";
-import IconMySql from "@/../public/imagensIcons/IconMySql.png";
+import IconHtml from "/public/imagensIcons/iconHtml.png";
+import IconCss from "/public/imagensIcons/iconCss.webp";
+import IconReact from "/public/imagensIcons/iconReact.png";
+import IconJs from "/public/imagensIcons/iconJs.png";
+import IconGit from "/public/imagensIcons/iconGit.png";
+import IconNodejs from "/public/imagensIcons/iconNodejs.png";
+import IconNpm from "/public/imagensIcons/iconNpm.jpg";
+import IconApiRest from "/public/imagensIcons/IconApiRest.png";
+import IconExpress from "/public/imagensIcons/iconExpress.png";
+import IconPostman from "/public/imagensIcons/iconPostman.jpg";
+import IconMySql from "/public/imagensIcons/IconMySql.png";
 
 import {gsap} from 'gsap';
 import React,{ useLayoutEffect, useRef } from "react";
