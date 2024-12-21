@@ -12,21 +12,21 @@ import CardSobreMim from "./Componentes/CardSobreMim/card.jsx";
 import CardExperience from "./Componentes/CardExperience/cardExperience.jsx";
 import Project from "./Componentes/CardProject/project.jsx";
 //imagens da seção about 
-import IconEducation from './../../public/imagensIcons/education.png';
-import IconExperience from "./../../public/imagensIcons/experience.png";
-import IconScrollPage from "./../../public/imagensIcons/arrow.png";
+import IconEducation from '../../public/imagensIcons/education.png';
+import IconExperience from "../../public/imagensIcons/experience.png";
+import IconScrollPage from "../../public/imagensIcons/arrow.png";
 //imagens da seção experience Frontend
-import IconHtml from "./../../public/imagensIcons/iconHtml.png";
-import IconCss from "./../../public/imagensIcons/iconCss.webp";
-import IconReact from "./../../public/imagensIcons/iconReact.png";
-import IconJs from "./../../public/imagensIcons/iconJs.png";
-import IconGit from "./../../public/imagensIcons/iconGit.png";
-import IconNodejs from "./../../public/imagensIcons/iconNodejs.png";
-import IconNpm from "./../../public/imagensIcons/iconNpm.jpg";
-import IconApiRest from "./../../public/imagensIcons/iconApiRest.png";
-import IconExpress from "./../../public/imagensIcons/iconExpress.png";
-import IconPostman from "./../../public/imagensIcons/iconPostman.jpg";
-import IconMySql from "./../../public/imagensIcons/iconMySql.png";
+import IconHtml from "../../public/imagensIcons/iconHtml.png";
+import IconCss from "../../public/imagensIcons/iconCss.webp";
+import IconReact from "../../public/imagensIcons/iconReact.png";
+import IconJs from "../../public/imagensIcons/iconJs.png";
+import IconGit from "../../public/imagensIcons/iconGit.png";
+import IconNodejs from "../../public/imagensIcons/iconNodejs.png";
+import IconNpm from "../../public/imagensIcons/iconNpm.jpg";
+import IconApiRest from "../../public/imagensIcons/iconApiRest.png";
+import IconExpress from "../../public/imagensIcons/iconExpress.png";
+import IconPostman from "../../public/imagensIcons/iconPostman.jpg";
+import IconMySql from "../../public/imagensIcons/iconMySql.png";
 
 
 
