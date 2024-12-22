@@ -1,4 +1,4 @@
-'use client';
+
 import Image from "next/image";
 
 import style from "../Banner/banner.module.css";
@@ -6,10 +6,10 @@ import style from "../Banner/banner.module.css";
 import BaixarCv from "../../service/service";
 
 //imagem perfil Banner
-import FotoPerfil from "/public/fotoPerfil.jpg";
-import IconGithub from "/public/imagensIcons/github.png";
-import IconLinkedin from "/public/imagensIcons/linkedin.jpg";
-import IconWhatsapp from "/public/imagensIcons/whatsapp.png";
+import FotoPerfil from "/fotoPerfil.jpg";
+import IconGithub from "/imagensicons/github.png";
+import IconLinkedin from "/imagensicons/linkedin.jpg";
+import IconWhatsapp from "/imagensicons/whatsapp.png";
 
 
 import {gsap} from 'gsap';

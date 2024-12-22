@@ -1,4 +1,4 @@
-'use client';
+
 import  {useState}  from "react";
 import style from "../Header/header.module.css";
 
