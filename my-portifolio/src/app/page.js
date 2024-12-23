@@ -12,21 +12,21 @@ import CardSobreMim from "./Componentes/CardSobreMim/card.jsx";
 import CardExperience from "./Componentes/CardExperience/cardExperience.jsx";
 import Project from "./Componentes/CardProject/project.jsx";
 //imagens da seção about 
-import IconEducation from '/imagensicons/education.png';
-import IconExperience from "/imagensicons/experience.png";
-import IconScrollPage from "/imagensicons/arrow.png";
+import IconEducation from "@/app/(public)/imagensicons/education.png";
+import IconExperience from "@/app/(public)/imagensicons/experience.png";
+import IconScrollPage from "@/app/(public)/imagensicons/arrow.png";
 //imagens da seção experience Frontend
-import IconHtml from "/imagensicons/iconHtml.png";
-import IconCss from "/imagensicons/iconCss.webp";
-import IconReact from "/imagensicons/iconReact.png";
-import IconJs from "/imagensicons/iconJs.png";
-import IconGit from "/imagensicons/iconGit.png";
-import IconNodejs from "/imagensicons/iconNodejs.png";
-import IconNpm from "/imagensicons/iconNpm.jpg";
-import IconApiRest from "/imagensicons/iconApiRest.png";
-import IconExpress from "/imagensicons/iconExpress.png";
-import IconPostman from "/imagensicons/iconPostman.jpg";
-import IconMySql from "/imagensicons/iconmysql.png";
+import IconHtml from "@/app/(public)/imagensicons/iconHtml.png";
+import IconCss from "@/app/(public)/imagensicons/iconCss.webp";
+import IconReact from "@/app/(public)/imagensicons/iconReact.png";
+import IconJs from "@/app/(public)/imagensicons/iconJs.png";
+import IconGit from "@/app/(public)/imagensicons/iconGit.png";
+import IconNodejs from "@/app/(public)/imagensicons/iconNodejs.png";
+import IconNpm from "@/app/(public)/imagensicons/iconNpm.jpg";
+import IconApiRest from "@/app/(public)/imagensicons/iconApiRest.png";
+import IconExpress from "@/app/(public)/imagensicons/iconExpress.png";
+import IconPostman from "@/app/(public)/imagensicons/iconPostman.jpg";
+import IconMySql from "@/app/(public)/imagensicons/iconmysql.png";
 
 
 export default function Home() {

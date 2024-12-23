@@ -6,10 +6,10 @@ import style from "../Banner/banner.module.css";
 import BaixarCv from "../../service/service";
 
 //imagem perfil Banner
-import FotoPerfil from "/fotoPerfil.jpg";
-import IconGithub from "/imagensicons/github.png";
-import IconLinkedin from "/imagensicons/linkedin.jpg";
-import IconWhatsapp from "/imagensicons/whatsapp.png";
+import FotoPerfil from "@/app/(public)/fotoPerfil.jpg";
+import IconGithub from "@/app/(public)/imagensicons/github.png";
+import IconLinkedin from "@/app/(public)/imagensicons/linkedin.jpg";
+import IconWhatsapp from "@/app/(public)/imagensicons/whatsapp.png";
 
 
 import {gsap} from 'gsap';
