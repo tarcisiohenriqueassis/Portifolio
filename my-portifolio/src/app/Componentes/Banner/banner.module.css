@@ -94,14 +94,16 @@
     
 }
 .iconLinkedin, .iconGithub, .iconWhatsapp{
+    width: 45px;
+    height: auto;
     border-radius: 50px;
     opacity: 0;
 }
-.icon:hover{
+#iconLinkedin:hover, #iconGithub:hover,#iconWhatsapp:hover{
     filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.253));
 }
 @media(max-width:768px){
-    .icon{
+    .iconLinkedin, .iconGithub, .iconWhatsapp{
         filter: none;
         width: 100%;
         max-width: 60px;
@@ -127,10 +129,7 @@
     }
 }
 @media(min-width:769px){
-    .icon{
-        width: 48px;
-        height: auto;
-    }
+    
     .containerInformacoesBanner{
         padding-left: 15px;
     }

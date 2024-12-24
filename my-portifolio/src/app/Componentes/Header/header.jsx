@@ -1,37 +1,38 @@
 
-import  {useState}  from "react";
 import style from "../Header/header.module.css";
 
+import  {useState}  from "react";
 import {gsap} from 'gsap';
 import React,{ useLayoutEffect, useRef } from "react";
 
 export default function Header(props){ 
-   
-    const [ esconderMenuHg,setAparecerMenuHg]= useState("true");
-    const [ iconMenuBg, setIconMenuBg]=useState("|||")
-    
-    const AbrirMenu=()=>{
-        if(esconderMenuHg === "true"){ 
-        setAparecerMenuHg("false")
-        setIconMenuBg("x")
-    } else{
-         setAparecerMenuHg("true")
-         setIconMenuBg("|||")
-       }
-    }
 
     const headerRef= useRef(null);
 
     useLayoutEffect(() => {
+
         gsap.fromTo(
-          `.${style.header}`,
-          { opacity: 0, x: 550}, // Estado inicial
-          { opacity: 1, x: 0, duration: 3, ease: "power3.out",visibility:"visible" } // Estado final
+         headerRef.current,
+          { opacity:0, x:550}, // Estado inicial
+          { opacity:1, x:0, duration: 3, ease: "power3.out"} // Estado final
         )
       }, []);
-      
+   
+    const [ esconderMenuHg,setAparecerMenuHg] = useState(true);
+    const [ iconMenuBg, setIconMenuBg] =useState("|||");
+    
+    const AbrirMenu =()=>{
+        if(esconderMenuHg === true){ 
+        setAparecerMenuHg(false)
+        setIconMenuBg("x")
+    } else{
+         setAparecerMenuHg(true)
+         setIconMenuBg("|||")
+       }
+    }
+
     return(
-        <header className={style.header} useRef={headerRef}>
+        <header className={style.header} ref={headerRef}>
             <div className={style.logoNome}>
                 <h1 className={style.h1}>Tarcísio H</h1>
             </div>
@@ -45,7 +46,7 @@ export default function Header(props){
             <div className={style.containerBtn}>
                 <button className={style.btn} onClick={AbrirMenu}>{iconMenuBg}</button>
                 </div>
-                <div className={esconderMenuHg === "true" ?style.containerMenuHbFechado :style.containerMenuHbOpen}>
+                <div className={esconderMenuHg === true ?style.containerMenuHbFechado :style.containerMenuHbOpen}>
                 <a className={style.linkMenuHb} href={props.linkAbout}>About</a>
                 <a className={style.linkMenuHb} href={props.linkExperience}>Experience</a>
                 <a className={style.linkMenuHb} href={props.linkProjects}>Projects</a>

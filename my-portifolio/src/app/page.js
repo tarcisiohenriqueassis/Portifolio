@@ -44,8 +44,8 @@ export default function Home() {
   
   return (
     <main className={styles.main}>
-      <Header linkAbout="#SobreMim" linkExperience="#Experience" linkProjects="#projects" linkContact="#contact"/>
-      <Banner/>
+       <Header linkAbout="#SobreMim" linkExperience="#Experience" linkProjects="#projects" linkContact="#contact"/>
+       <Banner/>
       <section className={styles.containerGlobalCardSobreMim}>
       <article className={styles.containerTitulo} >
           <span id="SobreMim" className={styles.spanSections}  >Get To Know More</span>
@@ -108,7 +108,6 @@ export default function Home() {
         
         </div>
       </section>
-      <div data-aos="flip-left">dsfhdfghfgjhgf</div>
 
       </main>
   );

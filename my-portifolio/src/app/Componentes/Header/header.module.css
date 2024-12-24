@@ -1,5 +1,5 @@
 .header{
-    visibility: hidden;
+    opacity: 0;
     width: 100%;
     height: auto;
     display: flex;
@@ -44,13 +44,18 @@
     border: none;
     background-color: transparent;
     color: #000;
+    overflow-y: hidden;
 }
 .containerGlobalMenuHb{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
 }
+.containerMenuHbFechado{
+    display: none;       
+}
 .containerMenuHbOpen{
+  
     display: flex;
     width: 200px;
     height: 230px;
@@ -62,11 +67,10 @@
     letter-spacing: 1px;
     position: absolute;
     top: 55px;
-    right: 14px;
+    right: 0px;
+    z-index: 1;
 }
-.containerMenuHbFechado{
-    display: none;
-}
+
 .linkMenuHb{
     text-decoration: none;
     color: #000;
