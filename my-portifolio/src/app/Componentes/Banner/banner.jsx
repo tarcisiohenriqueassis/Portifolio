@@ -1,4 +1,4 @@
-
+'use client';
 import Image from "next/image";
 
 import style from "../Banner/banner.module.css";
@@ -6,31 +6,40 @@ import style from "../Banner/banner.module.css";
 import BaixarCv from "../../service/service";
 
 //imagem perfil Banner
-import FotoPerfil from "@/app/(public)/fotoPerfil.jpg";
-import IconGithub from "@/app/(public)/imagensicons/github.png";
-import IconLinkedin from "@/app/(public)/imagensicons/linkedin.jpg";
-import IconWhatsapp from "@/app/(public)/imagensicons/whatsapp.png";
+import fotoPerfil from '../../(public)/fotoPerfil.jpg';
 
+//imagem Icons banner
+import iconWhatsapp from '@/app/(public)/imagensicons/whatsapp.png';
+import iconLinkedin from '@/app/(public)/imagensicons/linkedin.jpg';
+import iconGithub from '@/app/(public)/imagensicons/github.png';
 
+//importando gsap
 import {gsap} from 'gsap';
 import React,{ useLayoutEffect } from "react";
 
 export default function Banner(){
 
     useLayoutEffect(()=>{
+       
         const tl = gsap.timeline();
        
         gsap.registerPlugin(tl)
-       
-        tl.fromTo(`.${style.image}`,{opacity:0,y:350},{opacity:1,y:0})
-        .fromTo(`.${style.span}`,{ opacity:0},{opacity:1})
-        .fromTo(`.${style.h2}`,{x:-200, opacity:0},{x:0, opacity:1})  
+
+        //animação do container de apresentação da foto de perfil
+        tl.fromTo(`.${style.span}`,{ opacity:0, x:300},{opacity:1,x:0})
+        .fromTo(`.${style.h2}`,{x:-300, opacity:0},{x:0, opacity:1})  
         .fromTo(`.${style.p}`,{x:200, opacity:0},{x:0, opacity:1})   
+        //animação do container e seus icons wats,linkedin,github
         .fromTo(`.${style.containerCurriculoBanner}`,{y:-100,opacity:0},{y:0, opacity:1})
-        .fromTo(`.${style.iconGithub}`,{y:-260,opacity:0},{y:0,opacity:1,overwrite: "auto"})
-        .fromTo(`.${style.iconLinkedin}`,{y:-260,opacity:0},{y:0,opacity:1,overwrite: "auto"})
         .fromTo(`.${style.iconWhatsapp}`,{y:-260,opacity:0},{y:0,opacity:1,overwrite: "auto"})
-        
+        .fromTo(`.${style.iconLinkedin}`,{y:-260,opacity:0},{y:0,opacity:1,overwrite: "auto"})
+        .fromTo(`.${style.iconGithub}`,{y:-260,opacity:0},{y:0,opacity:1,overwrite: "auto"})
+        //animação da foto de perfil
+         .fromTo(`.${style.image}`,{opacity:1,y:0},{opacity:1,y:10, duration:3,ease: "power1.inOut", repeat: -1, yoyo: true})
+     
+       
+
+        //reponsavel por desfragmentar , para q n fique carregando sem necessidade
         return ()=>{
             gsap.killTweensOf(tl)
         }
@@ -40,7 +49,7 @@ export default function Banner(){
     return(
         <section className={style.containerGlobalBanner}>
             <div className={style.containerImage}  >
-                <Image  className={style.image} src={FotoPerfil} alt="Tarcisio H" title="Tarcisio H"/>
+                <Image className={style.image} src={fotoPerfil} alt="Tarcisio H"/>
             </div>
             <div className={style.containerInformacoesBanner}>
                 <article >
@@ -54,9 +63,9 @@ export default function Banner(){
                        <a className={style.linkContact} href="tel:+033987054654" target="blank">Contact info</a>
                    </article>
                    <article  className={style.containerIconBanner}>
-                    <a className={style.linkIconGithub}  href="https://github.com/tarcisiohenriqueassis" target="_blank"><Image  className={style.iconGithub} id={style.iconGithub} src={IconGithub} width={45}/></a>
-                    <a className={style.linkIconLinkedin} href="https://www.linkedin.com/in/tarcisiohenriqueassis/" target="_blank"><Image  className={style.iconLinkedin} id={style.iconLinkedin} src={IconLinkedin} width={45}/></a>
-                    <a className={style.linkIconWathSapp} href="tel:+55033987054654" target="blank"><Image  className={style.iconWhatsapp} id={style.iconWhatsapp}  src={IconWhatsapp} width={45} /></a>
+                    <a className={style.linkIconWhatSapp} href="#"><Image id={style.iconWhatsapp} className={style.iconWhatsapp} src={iconWhatsapp}/></a>
+                    <a className={style.linkIconLinkedin} href="#"><Image id={style.iconLinkedin} className={style.iconLinkedin} src={iconLinkedin}/></a>
+                    <a className={style.linkIconGithub} href="#"><Image id={style.iconGithub}   className={style.iconGithub} src={iconGithub}/></a>
                    </article>
                 </div>
 

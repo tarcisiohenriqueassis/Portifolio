@@ -42,10 +42,14 @@
   gap: 20px;
   padding: 20px 0px 50px;
 }
+.containerLinkScrollPage{
+  overflow: hidden;
+}
 .imgLinkScrollPage{
   width: 100%;
   max-width: 50px;
   min-width: 30px;
+  height: auto;
 }
 .containerGlobalSectionExperience{
   width: 100%;

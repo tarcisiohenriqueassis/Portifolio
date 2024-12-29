@@ -6,17 +6,16 @@ import {gsap} from 'gsap';
 import React,{ useLayoutEffect, useRef } from "react";
 
 export default function Header(props){ 
+  
+   useLayoutEffect(() => {
 
-    const headerRef= useRef(null);
-
-    useLayoutEffect(() => {
-
-        gsap.fromTo(
-         headerRef.current,
-          { opacity:0, x:550}, // Estado inicial
-          { opacity:1, x:0, duration: 3, ease: "power3.out"} // Estado final
-        )
-      }, []);
+       gsap.fromTo(
+        //aplica o efeito no header, usado right , pois x,y causa problemas no menu hamburguer
+        `.${style.header}`,
+         { opacity:0, right:'350px'}, // Estado inicial
+         { opacity:1, right:'0px',duration:6,ease:'power4.inOut'} // Estado final
+       )
+     }, []);
    
     const [ esconderMenuHg,setAparecerMenuHg] = useState(true);
     const [ iconMenuBg, setIconMenuBg] =useState("|||");
@@ -32,7 +31,7 @@ export default function Header(props){
     }
 
     return(
-        <header className={style.header} ref={headerRef}>
+        <header className={style.header} >
             <div className={style.logoNome}>
                 <h1 className={style.h1}>Tarcísio H</h1>
             </div>

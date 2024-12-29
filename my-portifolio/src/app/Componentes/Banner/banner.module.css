@@ -89,9 +89,8 @@
 .containerIconBanner{
     padding: 20px 0px 0px;
 }
-.linkIconWathSapp,.linkIconLinkedin,.linkIconGithub{
-    padding: 0px 10px;
-    
+.linkIconWhatSapp,.linkIconLinkedin,.linkIconGithub{
+    padding: 0px 10px;  
 }
 .iconLinkedin, .iconGithub, .iconWhatsapp{
     width: 45px;
@@ -100,7 +99,7 @@
     opacity: 0;
 }
 #iconLinkedin:hover, #iconGithub:hover,#iconWhatsapp:hover{
-    filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.253));
+    box-shadow:0px 0px 5px 0px #0000004d;
 }
 @media(max-width:768px){
     .iconLinkedin, .iconGithub, .iconWhatsapp{

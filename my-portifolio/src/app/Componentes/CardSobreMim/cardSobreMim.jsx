@@ -1,6 +1,7 @@
+'use client'
 import Image from "next/image";
 
-import style from "./card.module.css";
+import style from "./cardSobreMim.module.css";
 
 export default function Card(props){
     return(

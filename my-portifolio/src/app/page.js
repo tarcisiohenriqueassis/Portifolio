@@ -1,111 +1,181 @@
 'use client';
 import {gsap} from 'gsap';
-import { useLayoutEffect, useRef } from "react";
+import ScrollTrigger from 'gsap/ScrollTrigger';
+import { useLayoutEffect, useRef,} from "react";
 
 import Image from "next/image";
 //Css
 import styles from "./page.module.css";
+// skils
+import skilsFront from './colecaoDados/dadosCardSkilsFront/skilsFront';
+import skilsBack from './colecaoDados/dadosCardSkilsBack/dadosCardSkilsBack';
 //Componentes
-import Header from "./Componentes/Header/header.jsx";
-import Banner from "./Componentes/Banner/banner.jsx";
-import CardSobreMim from "./Componentes/CardSobreMim/card.jsx";
-import CardExperience from "./Componentes/CardExperience/cardExperience.jsx";
-import Project from "./Componentes/CardProject/project.jsx";
-//imagens da seção about 
-import IconEducation from "@/app/(public)/imagensicons/education.png";
-import IconExperience from "@/app/(public)/imagensicons/experience.png";
-import IconScrollPage from "@/app/(public)/imagensicons/arrow.png";
-//imagens da seção experience Frontend
-import IconHtml from "@/app/(public)/imagensicons/iconHtml.png";
-import IconCss from "@/app/(public)/imagensicons/iconCss.webp";
-import IconReact from "@/app/(public)/imagensicons/iconReact.png";
-import IconJs from "@/app/(public)/imagensicons/iconJs.png";
-import IconGit from "@/app/(public)/imagensicons/iconGit.png";
-import IconNodejs from "@/app/(public)/imagensicons/iconNodejs.png";
-import IconNpm from "@/app/(public)/imagensicons/iconNpm.jpg";
-import IconApiRest from "@/app/(public)/imagensicons/iconApiRest.png";
-import IconExpress from "@/app/(public)/imagensicons/iconExpress.png";
-import IconPostman from "@/app/(public)/imagensicons/iconPostman.jpg";
-import IconMySql from "@/app/(public)/imagensicons/iconmysql.png";
-
+import Header from "./Componentes/Header/header";
+import Banner from "./Componentes/Banner/banner";
+import CardSobreMim from "./Componentes/CardSobreMim/cardSobreMim";
+import CardSkils from "./Componentes/CardSkils/cardSkils";
+import Project from "./Componentes/CardProject/project";
+//imagem ScrollPage
+import scrollPage from '@/app/(public)/imagensicons/arrow.png'; 
+//imagens da seção Sobre Mim
+import iconEducação from '@/app/(public)/imagensicons/education.png';
+import iconExperiencia from '@/app/(public)/imagensicons/experience.png';
 
 export default function Home() {
 
-  const tituloRef = useRef(null);
+// ScroolTrigger da parte Sobre mim
+  const tl = useRef();
+  // referencia do container de marcação de inicio e fim 
+  const containerSobreMimRef = useRef();
 
-  useLayoutEffect(() => {
-    // Animação usando GSAP para o elemento com ref
-    gsap.fromTo(
-      tituloRef.current,
-      { opacity: 0, y: 50, visibility:"hidden"  }, // Estado inicial
-      { opacity: 1, y: 0, duration: 2, ease: "power3.out", visibility:"visible" } // Estado final
-    );
-  }, []);
-  
+  useLayoutEffect(()=>{
+
+    gsap.registerPlugin(ScrollTrigger)
+    
+    const ctx = gsap.context(()=>{
+      tl.current = gsap.timeline({
+        scrollTrigger:{
+          trigger:`.${styles.containerCardsSobreMim}`,
+          scrub:false,
+          markers:false,
+          start:'top 330px',
+          end:'bottom 670px'
+        }
+      })  // conforme a ordem das animações , vai se executando                                  
+      .fromTo(`.${styles.spanSections}`,{y:300, opacity:0},{y:0,opacity:1})
+      .fromTo(`.${styles.tituloSections}`,{x:300, opacity:0},{x:0,opacity:1})
+      .fromTo(`.${styles.containerCardsSobreMim}`,{opacity:0,x:160},{opacity:1,x:0})
+      .fromTo(`.${styles.imgLinkScrollPage}`,{visibility:"hidden",y:150},{visibility:"visible",opacity:1,y:0})
+    },containerSobreMimRef)
+
+  },[])
+
+
+  //ScrollTrigger da seção experiencia 
+  const containerExperienceRef = useRef();
+
+  useLayoutEffect(()=>{
+
+    gsap.registerPlugin(ScrollTrigger)
+    
+    const ctx = gsap.context(()=>{
+      tl.current = gsap.timeline({
+        scrollTrigger:{
+          trigger:`.${styles.containerTitulo}`,
+          scrub:false,
+          markers:true,
+          start:'top 110px',
+          end:'bottom 160px'
+        }
+      })  // conforme a ordem das animações , vai se executando   
+      .fromTo(`.${styles.containerCardsLinguagens}`,{ opacity:0},{opacity:1})   
+      .fromTo(`.${styles.containerCards}`,{ x:-250 ,opacity:0},{x:0, opacity:1})                            
+      .fromTo(`.${styles.containerTitulo}`,{x:300, opacity:0},{x:0,opacity:1,duration:1})
+      .fromTo(`.${styles.tituloLinguagensFrontBack}`,{ opacity:0}, { opacity:1, duration:3})
+      .fromTo(`.${styles.imgLinkScrollPage}`,{opacity:0,y:150},{opacity:1,y:0})
+      
+    },containerExperienceRef)
+
+  },[])
+
+ 
+
   return (
-    <main className={styles.main}>
+
+    <main  className={styles.main}>
        <Header linkAbout="#SobreMim" linkExperience="#Experience" linkProjects="#projects" linkContact="#contact"/>
        <Banner/>
-      <section className={styles.containerGlobalCardSobreMim}>
-      <article className={styles.containerTitulo} >
-          <span id="SobreMim" className={styles.spanSections}  >Get To Know More</span>
-          <h2 className={styles.tituloSections} >About Me</h2>
-        </article>
-        <article className={styles.containerCardsSobreMim}>
-          <CardSobreMim imagemCard={IconExperience} titulo="Experience" span="1+ year" paragrafo="Frontend Development"/>
-          <CardSobreMim imagemCard={IconEducation} titulo="Education"span="Ensino Medio - Completo" paragrafo="E.E.Labor Club"/>  
-        </article>
-        <article className={styles.containerLinkScollPage}>
-        <a href="#Experience" className={styles.linkScrollPage}>
-            <Image className={styles.imgLinkScrollPage} src={IconScrollPage} alt="icon" width={50} height={50}/>
-          </a>
-        </article>
-      </section> 
-      <section id="Experience" className={styles.containerGlobalSectionExperience}>
+
+       {/* Seção Sobre mim */}
+        <section  className={styles.containerGlobalCardSobreMim} ref={containerSobreMimRef}>
+
+          <article  className={styles.containerTitulo} >
+              <span id="SobreMim" className={styles.spanSections}>Get To Know More</span>
+              <h2 className={styles.tituloSections}>About Me</h2>
+          </article>
+
+          <article  className={styles.containerCardsSobreMim}>
+              
+              <CardSobreMim
+               imagemCard={iconEducação}
+               titulo="Education" 
+               span="Ensino - Médio Completo" 
+               paragrafo="E.E. Labor Club" 
+               />
+
+              <CardSobreMim 
+              imagemCard={iconExperiencia} 
+              titulo="Experiencia" 
+              span="FullStack" 
+              paragrafo="+2Years" 
+              />            
+          
+          </article>
+
+           {/*Scroll da pagina */}
+          <article className={styles.containerLinkScrollPage}>
+          <a className={styles.linkScrollPage} href="#Experience">
+            <Image className={styles.imgLinkScrollPage} src={scrollPage} width={50} height={50}/>
+          </a> 
+          </article>
+        </section>
+
+       {/*Seção Experience*/}
+      <section  className={styles.containerGlobalSectionExperience} ref={containerExperienceRef}>
+
         <article className={styles.containerTitulo}>
           <span className={styles.spanSections}>Explore My</span>
           <h2 className={styles.tituloSections}>Experiences</h2>
         </article>
+
+        {/*Seção Linguagens Front */}
         <article className={styles.containerCardsLinguagens}>
           <div className={styles.containerGlobalCardsFrontEnd}>
             <h3 className={styles .tituloLinguagensFrontBack}>Frontend Development</h3>
               <article className={styles.containerCards}>
-                <CardExperience linguagem="Html" nivelExperiencia="avançado" iconLinguagem={IconHtml} />
-                <CardExperience linguagem="Css" nivelExperiencia="intermediário" iconLinguagem={IconCss}/>
-                <CardExperience linguagem="React.js" nivelExperiencia="intermediário" iconLinguagem={IconReact}/>  
-                <CardExperience linguagem="JavaScript" nivelExperiencia="básico" iconLinguagem={IconJs}/>
-                <CardExperience linguagem="Npm" nivelExperiencia="Básico" iconLinguagem={IconNpm} />    
-                <CardExperience linguagem="Git" nivelExperiencia="básico" iconLinguagem={IconGit}/>        
-              </article>   
+             
+              {skilsFront.map((array)=>( 
+                <CardSkils
+                key={array.id}
+                iconLinguagem={array.iconLinguagem} 
+                linguagem={array.linguagem} 
+                nivelExperiencia={array.nivelExperiencia} />
+                ))}
               
+               </article>      
           </div>
+
+           {/*Seção Linguagens Back */}
           <div  className={styles.containerGlobalCardsBackend}>
-            <h3  className={styles.tituloLinguagensFrontBack} >Backend Development</h3>
+            <h3 className={styles.tituloLinguagensFrontBack}>Backend Development</h3>
               <article className={styles.containerCards}>
-                <CardExperience linguagem="Node.js" nivelExperiencia="intermediário" iconLinguagem={IconNodejs}/>
-                <CardExperience linguagem="JavaScript" nivelExperiencia="básico" iconLinguagem={IconJs}/>
-                <CardExperience linguagem="Postman" nivelExperiencia="básico" iconLinguagem={IconPostman}/>
-                <CardExperience linguagem="Express" nivelExperiencia="básico" iconLinguagem={IconExpress} />
-                <CardExperience linguagem="MySql" nivelExperiencia="básico" iconLinguagem={IconMySql}/>
-                <CardExperience linguagem="ApiRest" nivelExperiencia="básico" iconLinguagem={IconApiRest}/>
+
+              {skilsBack.map((array)=>( 
+                  <CardSkils 
+                  key={array.id} 
+                  iconLinguagem={array.iconLinguagem} 
+                  linguagem={array.linguagem} 
+                  nivelExperiencia={array.nivelExperiencia} />
+                ))}
+
               </article>   
           </div>
         </article>
+
+         {/*Scroll da pagina */}
         <article className={styles.containerLinkScollPage}>
           <a href="#projects" className={styles.linkScrollPage}>
-            <Image className={styles.imgLinkScrollPage} src={IconScrollPage} width={50} height={50} alt="icon"/>
+          <Image className={styles.imgLinkScrollPage} src={scrollPage} width={50} height={50}/>
           </a>
         </article>
       </section>
+
+       {/*Seção Projects */}
       <section id="projects" className={styles.containerGlobalMyProjects}>
       <span className={styles.spanSections}>Explore My</span>
         <h2 className={styles.tituloSections}>My Projects</h2>
         <div className={styles.containerCardsMyProjects}>
-        <Project imagemLinkGithub={IconGit}/>
-        <Project imagemLinkGithub={IconGit}/>
-        <Project imagemLinkGithub={IconGit}/>
-        <Project imagemLinkGithub={IconGit}/>
-        
+    
         </div>
       </section>
 
