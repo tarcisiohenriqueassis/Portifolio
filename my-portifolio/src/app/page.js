@@ -20,7 +20,7 @@ import scrollPage from '@/app/(public)/imagensicons/arrow.png';
 //imagens da seção Sobre Mim
 import iconEducação from '@/app/(public)/imagensicons/education.png';
 import iconExperiencia from '@/app/(public)/imagensicons/experience.png';
-
+import iconFundo from '@/app/(public)/imagensicons/fundo.jpg'
 export default function Home() {
 
 // ScroolTrigger da parte Sobre mim
@@ -69,10 +69,10 @@ export default function Home() {
         }
       })  // conforme a ordem das animações , vai se executando   
       .fromTo(`.${styles.containerCardsLinguagens}`,{ opacity:0},{opacity:1})   
-      .fromTo(`.${styles.containerCards}`,{ x:-250 ,opacity:0},{x:0, opacity:1})                            
+      .fromTo(`.${styles.containerCards}`,{ x:-250 ,opacity:0},{x:0, opacity:1})    
+      .fromTo(`.${styles.imgLinkScrollPage}`,{opacity:0},{opacity:1})                        
       .fromTo(`.${styles.containerTitulo}`,{x:300, opacity:0},{x:0,opacity:1,duration:1})
-      .fromTo(`.${styles.tituloLinguagensFrontBack}`,{ opacity:0}, { opacity:1, duration:3})
-      .fromTo(`.${styles.imgLinkScrollPage}`,{opacity:0,y:150},{opacity:1,y:0})
+      .fromTo(`.${styles.tituloLinguagensFrontBack}`,{ opacity:0}, { opacity:1, duration:2})
       
     },containerExperienceRef)
 
@@ -121,7 +121,7 @@ export default function Home() {
         </section>
 
        {/*Seção Experience*/}
-      <section  className={styles.containerGlobalSectionExperience} ref={containerExperienceRef}>
+      <section id='Experience'  className={styles.containerGlobalSectionExperience} ref={containerExperienceRef}>
 
         <article className={styles.containerTitulo}>
           <span className={styles.spanSections}>Explore My</span>

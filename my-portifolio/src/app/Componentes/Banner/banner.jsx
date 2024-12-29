@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import style from "../Banner/banner.module.css";
 
-import BaixarCv from "../../service/service";
+import BaixarCv from "../BaixarCv/baixarCurriculo";
 
 //imagem perfil Banner
 import fotoPerfil from '../../(public)/fotoPerfil.jpg';
